@@ -1,0 +1,16 @@
+1331060574
+CasesController	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	class CasesController 
+Quote	C:/Sites/proyectos_incaztech/quotes/app/models/quote.rb	class Quote 
+QuotesController	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	class QuotesController 
+create	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def create
+create	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def create
+destroy	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def destroy
+destroy	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def destroy
+edit	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def edit
+edit	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def edit
+index	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def index
+new	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def new
+new	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def new
+show	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def show
+update	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def update
+update	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def update

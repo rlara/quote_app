@@ -1,0 +1,44 @@
+<p>
+  <b>Name</b>
+  <%= c.name %>
+</p>
+
+<p>
+  <b>Description</b>
+  <%= c.description %>
+</p>
+
+<p>
+  <b>Tipo</b>
+  <% if c.tipe == true %>
+    <%= c.tipe = 'Feature'%>
+  <% else %>
+    <%= c.tipe = 'Case'%>
+  <% end %>
+</p>
+
+<p>
+  <b>HoursProgramador</b>
+  <%= c.code %>
+</p>
+
+<p>
+  <b>HoursDesign</b>
+  <%= c.design %>
+</p>
+
+<p>
+  <b>Base</b>
+  <% if c.base == true %>
+    <%= c.base = 'Si es'%>
+  <% else %>
+    <%= c.base = 'No es'%>
+  <% end %>
+</p>
+
+<%= link_to 'Destroy', [c.quote, c], :class => "btn btn-danger", :confirm => 'Are you sure?', :method => :delete  %>
+<%= link_to 'Edit', edit_quote_case_path(c.quote, c)  %>
+
+
+
+<hr />
