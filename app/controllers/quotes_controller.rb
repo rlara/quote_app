@@ -14,7 +14,7 @@ class QuotesController < ApplicationController
   # GET /quotes/1.json
   def show
     @quote = Quote.find(params[:id])
-    @case = @quote.cases
+    @case = @quote.cases(params[@quote])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @quote }

@@ -1,6 +1,8 @@
+<div class="span9">
 <h1>Editing case</h1>
 <%= render 'form' %>
 <!-- /posts/:quote_id/case/:id -->
-<%= link_to 'Show', [@case.quote, @case] %> |
+<%= link_to 'Show', [@case.quote, @case], :class => "btn btn-primary" %> |
 <!-- /posts/:quote_id/cases/ -->
-<%= link_to 'Back', quote_path(@quote) %>
+<%= link_to 'Back', quote_path(@quote), :class => "btn btn-primary" %>
+</div>

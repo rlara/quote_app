@@ -1,4 +1,4 @@
-1331060574
+1331598084
 CasesController	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	class CasesController 
 Quote	C:/Sites/proyectos_incaztech/quotes/app/models/quote.rb	class Quote 
 QuotesController	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	class QuotesController 
@@ -8,6 +8,7 @@ destroy	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	
 destroy	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def destroy
 edit	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def edit
 edit	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def edit
+get_quote	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def get_quote
 index	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def index
 new	C:/Sites/proyectos_incaztech/quotes/app/controllers/cases_controller.rb	  def new
 new	C:/Sites/proyectos_incaztech/quotes/app/controllers/quotes_controller.rb	  def new

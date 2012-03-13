@@ -14,16 +14,57 @@
   <b>Costperhour:</b>
   <%= @quote.costperhour %>
 </p>
-
-
-
 <h2>Cases</h2>
 <%= render :partial => "cases/c", :collection => @quote.cases %>
+  <% if @quote.cases.empty?%>
+  <em>Not Found</em>
+  <%end%>
 
-<%= 'tamaño : ' + @quote.cases.size.to_s%>
+<div id="myModal" class="modal hide fade">
+           <div class="modal-header">
+             <a class="close" data-dismiss="modal" >&times;</a>
+             <h3>Modal Heading</h3>
+           </div>
 
-<%= link_to 'New Case', new_quote_case_path(@quote) %> |
+        <div class="span6">
+          <%= form_for([@quote, @quote.cases.build]) do |f| %>
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_area :description %>
+          </div>
+          <div class="field">
+            <%= f.radio_button :tipe, true %>
+            <%= f.label :tipe, 'Feature', :value => 'true' %>
+            <%= f.radio_button :tipe, false %>
+            <%= f.label :tipe, 'Case', :value => 'false' %>
 
+          </div>
+          <div class="field">
+            <%= f.label :code %>
+            <%= f.text_field :code %>
+          </div>
+          <div class="field">
+            <%= f.label :design %>
+            <%= f.text_field :design %>
+          </div>
+          <div class="field">
+            <%= f.label :base %>
+            <%= f.check_box :base %>
+          </div>
+          <div class="actions">
+            <%= f.submit :class => "btn btn-primary" %>
+          </div>
+          <% end %>
+      </div>
+</div>
 
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
+<br/>
+<a data-toggle="modal" href="#myModal" class="btn btn-success">New Case</a> |
+<%= link_to 'New Case', new_quote_case_path(@quote), :class => "btn btn-warning" %> |
+
+<%= link_to 'Edit', edit_quote_path(@quote), :class => "btn btn-primary" %> |
+<%= link_to 'Back', quotes_path, :class => "btn btn-primary" %>
