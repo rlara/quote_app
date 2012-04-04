@@ -21,7 +21,10 @@
   </div>
   <div class="field">
     <%= f.label :costperhour %><br />
-    <%= f.text_field :costperhour %>
+    <div class="input-prepend input-append">
+      <%= f.text_field :costperhour %>
+      <span class="add-on">$</span>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit :class => "btn btn-primary"%>

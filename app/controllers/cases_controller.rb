@@ -11,7 +11,7 @@ class CasesController < ApplicationController
     @case = @quote.cases.build
     respond_to do |format|
       format.html # new.html.erb
-      format.json  { render json: @case }
+      format.js
     end
   end
     
@@ -32,15 +32,15 @@ class CasesController < ApplicationController
         #1st argument of redirect_to is an array, in order to build the correct route to the nested resource comment
         format.html { redirect_to quote_path(@quote) }
         #the key :location is associated to an array in order to build the correct route to the nested resource comment
-        format.json { render json: @case, status: :created, location: @case }
+        flash[:notice] = "Complete!"
+        format.js
+        
       else
-        format.html { render :action => "new" }
-        format.json  { render :xml => @case.errors, :status => :unprocessable_entity }
-      end
+        flash[:notice1] = "Error Not Complete!" 
+              end
     end
   end
   
- 
   def update
     #1st you retrieve the post thanks to params[:post_id]
     
@@ -49,7 +49,7 @@ class CasesController < ApplicationController
     respond_to do |format|
       if @case.update_attributes(params[:case])
         #1st argument of redirect_to is an array, in order to build the correct route to the nested resource comment
-        format.html { redirect_to quote_path(@quote) }
+        format.html { redirect_to quote_path(@quote), notice: 'Quote was successfully updated.' }
         format.json  { head :ok }
       else
         format.html { render :action => "edit" }

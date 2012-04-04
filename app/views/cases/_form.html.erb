@@ -1,5 +1,5 @@
 <%= form_for([@case.quote, @case]) do |f| %>
-  
+
   <% if @case.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@case.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -23,7 +23,7 @@
     <%= f.radio_button :tipe, true %>
     <%= f.label :tipe, 'Feature', :value => 'true' %>
     <%= f.radio_button :tipe, false %>
-    <%= f.label :tipe, 'Case', :value => 'false' %>
+    <%= f.label :tipe, 'Chore', :value => 'false' %>
   </div>
   <div class="field">
     <%= f.label :code %><br />

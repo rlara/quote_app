@@ -1,0 +1,37 @@
+<div class="span6">
+          <p id="notice1"><%= notice %></p>
+          <%= form_for([@quote, @quote.cases.build], :remote => true) do |f| %>
+            <div class="field">
+              <%= f.label :name %>
+              <%= f.text_field :name %>
+            </div>
+           <div class="field">
+              <%= f.label :description %>
+              <%= f.text_area :description %>
+            </div>
+           <div class="field">
+              <%= f.radio_button :tipe, true %>
+              <%= f.label :tipe, 'Feature', :value => 'true' %>
+              <%= f.radio_button :tipe, false %>
+              <%= f.label :tipe, 'Chore', :value => 'false' %>
+
+           </div>
+           <div class="field">
+              <%= f.label :code %>
+              <%= f.text_field :code %>
+           </div>
+           <div class="field">
+              <%= f.label :design %>
+              <%= f.text_field :design %>
+           </div>
+           <div class="field">
+              <%= f.label :base %>
+              <%= f.check_box :base %>
+           </div>
+           <div class="actions">
+              <%= f.submit :class => "btn btn-primary" %>
+           </div>
+          <% end %>
+          <%= link_to 'Back', quote_path(@quote), :class => "btn btn-primary"%>
+</div>
+      
