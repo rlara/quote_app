@@ -12,15 +12,38 @@
 
 <p>
   <b>Costperhour:</b>
-  <%= @quote.costperhour %>
+  <%= costo = @quote.costperhour %>
 </p>
+<p>
+  <b>Total hr code:</b>
+  <%= code= @quote.cases.sum (:code)%>
+</p>
+<p>
+  <b>Total hr design:</b>
+  <%= design = @quote.cases.sum(:design)%>
+</p>
+<p>
+  <b>Total: $ <%= total = (design + code) * costo %></b>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote), :class => "btn btn-primary" %> |
+<%= link_to 'Back', quotes_path, :class => "btn btn-primary" %>
+
 <h2>Cases</h2>
 <div id='allcases'>
 <%= render :partial => "cases/c", :collection => @quote.cases %>
+<<<<<<< HEAD
   <% if @quote.cases.empty?%>
   <h3>Not found</h3>
   <%end%>
 </div>
+=======
+  <% if found = @quote.cases.empty?%>
+  <em>Without Cases</em>
+ <%end%>
+   
+
+>>>>>>> 04a18ceed9b74a378f72902c1a4f178907029fb5
 <div id="myModal" class="modal hide fade">
            <div class="modal-header">
              <a class="close" data-dismiss="modal" >&times;</a>
@@ -31,8 +54,15 @@
 </div>
 
 <br/>
+<<<<<<< HEAD
 <a data-toggle="modal" href="#myModal" class="btn btn-success">New Case</a> |
 
+=======
+>>>>>>> 04a18ceed9b74a378f72902c1a4f178907029fb5
 
-<%= link_to 'Edit', edit_quote_path(@quote), :class => "btn btn-primary" %> |
-<%= link_to 'Back', quotes_path, :class => "btn btn-primary" %>
+<a data-toggle="modal" href="#myModal" class="btn btn-success">New Case</a>
+
+
+
+
+

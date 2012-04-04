@@ -11,3 +11,5 @@ config/database.yml
 *.DS_Store
 *.swp
 *.out
+
+._redcar/
