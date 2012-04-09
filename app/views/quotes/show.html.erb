@@ -31,19 +31,15 @@
 
 <h2>Cases</h2>
 <div id='allcases'>
-<%= render :partial => "cases/c", :collection => @quote.cases %>
-<<<<<<< HEAD
+<%= render :partial => "cases/c", :collection => @quote.cases.order("created_at DESC") %>
+  <% @quote.cases.order("created_at DESC")%>
   <% if @quote.cases.empty?%>
   <h3>Not found</h3>
   <%end%>
 </div>
-=======
-  <% if found = @quote.cases.empty?%>
-  <em>Without Cases</em>
- <%end%>
-   
+ 
 
->>>>>>> 04a18ceed9b74a378f72902c1a4f178907029fb5
+
 <div id="myModal" class="modal hide fade">
            <div class="modal-header">
              <a class="close" data-dismiss="modal" >&times;</a>
@@ -54,13 +50,10 @@
 </div>
 
 <br/>
-<<<<<<< HEAD
+
 <a data-toggle="modal" href="#myModal" class="btn btn-success">New Case</a> |
 
-=======
->>>>>>> 04a18ceed9b74a378f72902c1a4f178907029fb5
 
-<a data-toggle="modal" href="#myModal" class="btn btn-success">New Case</a>
 
 
 
