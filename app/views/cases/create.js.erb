@@ -1,2 +1,6 @@
+<% if @case.errors.empty? %>
 $('#allcases').html("<%= escape_javascript(render :partial => "cases/c", :collection => @quote.cases.order("created_at DESC")) %>")
 $('#myModal').html("<%= escape_javascript(render 'quotes/form1') %>");  
+<% else %>
+alert("Error")
+<% end %>

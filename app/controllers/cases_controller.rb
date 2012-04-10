@@ -32,11 +32,11 @@ class CasesController < ApplicationController
         #1st argument of redirect_to is an array, in order to build the correct route to the nested resource comment
         format.html { redirect_to quote_path(@quote) }
         #the key :location is associated to an array in order to build the correct route to the nested resource comment
-        flash[:notice] = "Complete!"
+       
         format.js
         
       else
-        flash[:notice1] = "Error Not Complete!" 
+         format.js
               end
     end
   end

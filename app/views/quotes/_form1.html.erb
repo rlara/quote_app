@@ -1,5 +1,4 @@
 <div class="span6">
-          <p id="notice1"><%= notice %></p>
           <%= form_for([@quote, @quote.cases.build], :remote => true) do |f| %>
             <div class="field">
               <%= f.label :name %>
