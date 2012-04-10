@@ -28,16 +28,7 @@ class CasesController < ApplicationController
     #2nd you create the comment with arguments in params[:comment]
     @case = @quote.cases.create(params[:case])
     respond_to do |format|
-      if @case.save
-        #1st argument of redirect_to is an array, in order to build the correct route to the nested resource comment
-        format.html { redirect_to quote_path(@quote) }
-        #the key :location is associated to an array in order to build the correct route to the nested resource comment
-       
         format.js
-        
-      else
-         format.js
-              end
     end
   end
   
