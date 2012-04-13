@@ -9,10 +9,10 @@
               <%= f.text_area :description %>
             </div>
            <div class="field">
-              <%= f.radio_button :tipe, true %>
-              <%= f.label :tipe, 'Feature', :value => 'true' %>
-              <%= f.radio_button :tipe, false %>
-              <%= f.label :tipe, 'Chore', :value => 'false' %>
+              <%= f.radio_button :tipe, 'feature' %>
+              <%= f.label :tipe, 'feature', :value => 'feature' %>
+              <%= f.radio_button :tipe, 'chore' %>
+              <%= f.label :tipe, 'chore', :value => 'chore' %>
 
            </div>
            <div class="field">

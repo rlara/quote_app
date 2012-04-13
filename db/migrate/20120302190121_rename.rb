@@ -1,8 +1,7 @@
 class Rename < ActiveRecord::Migration
-  def up
+  def change
     rename_column :cases, :type, :tipe
   end
 
-  def down
-  end
+ 
 end

@@ -32,7 +32,6 @@
 <h2>Cases</h2>
 <div id='allcases'>
 <%= render :partial => "cases/c", :collection => @quote.cases.order("created_at DESC") %>
-  <% @quote.cases.order("created_at DESC")%>
   <% if @quote.cases.empty?%>
   <h6>Create your first case</h6>
   <%end%>

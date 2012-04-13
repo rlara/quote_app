@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120302190121) do
+ActiveRecord::Schema.define(:version => 20120412195758) do
 
   create_table "cases", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.boolean  "tipe"
     t.integer  "code"
     t.integer  "design"
     t.boolean  "base"
     t.integer  "quote_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tipe"
   end
 
   add_index "cases", ["quote_id"], :name => "index_cases_on_quote_id"
