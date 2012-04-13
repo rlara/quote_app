@@ -40,7 +40,7 @@ class CasesController < ApplicationController
     respond_to do |format|
       if @case.update_attributes(params[:case])
         #1st argument of redirect_to is an array, in order to build the correct route to the nested resource comment
-        format.html { redirect_to quote_path(@quote), notice: @case.name+' was successfully updated.' }
+        format.html { redirect_to quote_path(@quote), notice: 'Case was successfully updated.' }
         format.json  { head :ok }
       else
         format.html { render :action => "edit" }
