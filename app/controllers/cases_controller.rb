@@ -58,7 +58,7 @@ class CasesController < ApplicationController
    
     @case = @quote.cases.find(params[:id])
     @case.destroy
-    redirect_to quote_path(@quote)
+    redirect_to quote_path(@quote), notice: @case.name+' was successfully deleted.'
   end
   
   
