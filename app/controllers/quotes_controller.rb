@@ -14,6 +14,8 @@ class QuotesController < ApplicationController
   # GET /quotes/1.json
   def show
     @quote = Quote.find(params[:id])
+    @search = @quote.cases.search(params[:search])
+    @cases = @search.all
     @case = @quote.cases(params[@quote])
     respond_to do |format|
       format.html # show.html.erb

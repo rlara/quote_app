@@ -29,7 +29,7 @@
 </table>
 
 <%= link_to 'Destroy', [c.quote, c], :class => "btn btn-danger", :confirm => 'Are you sure?', :method => :delete  %>
-<%= link_to 'Edit', edit_quote_case_path(c.quote, c), :class => "btn btn-info"  %>
+<%= link_to 'Edit', edit_quote_case_path(c.quote, c), :class => "btn btn-info", :remote => true  %>
 
 <br/>
 <br/>

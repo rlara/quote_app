@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120412195758) do
+ActiveRecord::Schema.define(:version => 20120419171013) do
 
   create_table "cases", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120412195758) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "tipe"
+    t.integer  "total_hours"
   end
 
   add_index "cases", ["quote_id"], :name => "index_cases_on_quote_id"

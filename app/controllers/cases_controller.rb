@@ -19,6 +19,9 @@ class CasesController < ApplicationController
  # GET /quotes/1/case/1edit  
   def edit
     @case = @quote.cases.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
   end
   
   
