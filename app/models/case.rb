@@ -19,6 +19,8 @@ class Case < ActiveRecord::Base
   validates :name,  :presence => true
   validates :description,  :presence => true, :length => { :maximum => 500 }
   validates :tipe, :presence => true
+  validates :design, :presence => true
+  validates :code, :presence => true
   belongs_to :quote
   
   TIPES = ["feature","chore"]

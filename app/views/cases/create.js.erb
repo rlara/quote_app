@@ -1,7 +1,9 @@
 <% if @case.errors.empty? %>
-$('#allcases').html("<%= escape_javascript(render :partial => "cases/c", :collection => @quote.cases.order("created_at DESC")) %>")
-$('#myModal').html("<%= escape_javascript(render 'quotes/form1') %>");  
-$('#myModal').modal('hide');
+top.location.href="<%= quote_path(@quote)%>"
+//$('#allcases').html("<%= escape_javascript(render :partial => "cases/c", :collection => @quote.cases.order("created_at DESC")) %>")
+//$('#myModal').html("<%= escape_javascript(render 'quotes/form1') %>");
+//$('#Total_case').html("Total Cases:  <%= @quote.cases.count %>");
+//$('#myModal').modal('hide');
 <% else %>
 alert("<%= @case.errors.full_messages.join('\n')%>")
 <% end %>

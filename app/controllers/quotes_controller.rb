@@ -17,6 +17,7 @@ class QuotesController < ApplicationController
     @search = @quote.cases.search(params[:search])
     @cases = @search.all
     @case = @quote.cases(params[@quote])
+    @total = @cases.count
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @quote }

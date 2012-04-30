@@ -41,13 +41,13 @@ class CasesController < ApplicationController
     #2nd you retrieve the comment thanks to params[:id]
     @case = @quote.cases.find(params[:id])
     respond_to do |format|
+      format.js
       if @case.update_attributes(params[:case])
-        #1st argument of redirect_to is an array, in order to build the correct route to the nested resource comment
-        format.html { redirect_to quote_path(@quote), notice: 'Case was successfully updated.' }
-        format.json  { head :ok }
+        
+        format.js
       else
-        format.html { render :action => "edit" }
-        format.json  { render :json => @case.errors, :status => :unprocessable_entity }
+       
+        format.js
       end
     end
   end
